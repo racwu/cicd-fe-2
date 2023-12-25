@@ -1,11 +1,14 @@
 node {
+  stage('Checkout'){
+    checkout scm
+  }
   stage('Build'){
-    sh 'chmod +x helloworld.sh'
+    sh 'chmod +x helloworld2.sh'
   }
   stage('Test'){
-    sh 'cat helloworld.sh'
+    sh 'cat helloworld2.sh'
   }
   stage('Deploy'){
-    sh './helloworld.sh'
+    sh './helloworld2.sh'
   }
 }
